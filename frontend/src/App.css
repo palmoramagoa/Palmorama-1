@@ -1,0 +1,54 @@
+/* Palmorama × Vaayu — immersive base */
+.App {
+  background: #ede5d3;
+  color: #1c1a16;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+.font-serif,
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* Custom selection */
+::selection {
+  background: #1c1a16;
+  color: #ede5d3;
+}
+
+/* Scrollbar */
+html { scrollbar-width: thin; scrollbar-color: #1c1a16 #ede5d3; }
+html::-webkit-scrollbar { width: 8px; }
+html::-webkit-scrollbar-track { background: #ede5d3; }
+html::-webkit-scrollbar-thumb { background: #1c1a16; border-radius: 0; }
+
+img { user-select: none; -webkit-user-drag: none; }
+
+.image-hover-slow {
+  transition-duration: 1400ms;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.image-hover-slower {
+  transition-duration: 1600ms;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Hide default focus rings only on non-interactive elements; keep on inputs/buttons */
+button:focus-visible, a:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
